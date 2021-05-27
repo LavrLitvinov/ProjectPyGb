@@ -38,13 +38,12 @@ def valid_url(url):
 
 # *********************************************************************************************
 def website_links(url, ext_link, int_link, java_link, break_link, DOMAIN_NAME ):
-    print("url: ", url)
+    print("Изучаем url: ", url)
     urls = set()
     soup = BeautifulSoup(requests.get(url).content, "html.parser")
 
-    for a_teg in soup.find_all("a", href = True):
-        
-        #href_row = a_teg.attrs.get("href")
+    for a_teg in soup.find_all("a", href = True):  
+        href_row = a_teg.attrs.get("href")
         #print("a: ", a_teg)
         
         if href_row in (None, "", "#", "/", " ", "\\", "'"):
@@ -161,7 +160,8 @@ def write_set (ext_link, int_link, java_link, break_link):
 tr = True
 
 while tr:
-    print("Для показа намертво зашита ссылка http://links.testingcourse.ru/")
+    #print("Для демонстрации намертво зашита ссылка http://links.testingcourse.ru/")
+    print()
     start_url = input("Введите начальный адрес ( обязательно с HTTP, HTTPS или в том роде):   ") # "http://links.testingcourse.ru/"  
     #"javascript:alert('Hello');" 
     if(urlparse(start_url).scheme == 'javascript'):
@@ -176,24 +176,17 @@ while tr:
         #print("Ну пчтииии ... *********************************************************")
         tr = False 
     else:
-        print(start_url, " -  сломана и нуждается в замене или ремонте")
+        print("Ссылка ", start_url, " -  сломана и нуждается в замене или ремонте")
 
 DOMAIN_NAME = urlparse(start_url).netloc # Получили доменное имя проверяемого сайта
 
 website_links(start_url, ext_link, int_link, java_link, break_link, DOMAIN_NAME )# спарсили все ссылки начальной страницы в множество urls      
-#print_set(ext_link, int_link, java_link, break_link) # Отладочная печать
+print()
+print("Вывод в консоль: ")
+print()
+print_set(ext_link, int_link, java_link, break_link) # Отладочная печать
 write_set (ext_link, int_link, java_link, break_link)
 print()
 print(" Все!")
+print()
 
-
-
-
-      
-
-
-
-
-
-
-    

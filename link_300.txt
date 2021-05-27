@@ -1,0 +1,16 @@
+Битые ссылки:
+image.jpg визуально - текст: sodales
+mailto:test@testingcourse.ru визуально - текст: nulla
+page.html визуально - текст: non
+page11.html визуально - текст: potenti
+page12.html визуально - текст: neque
+page13.html визуально - текст: Praesent
+page15.html визуально - текст: felis
+page16.html визуально - текст: sodales
+page17.html визуально - текст: Nullam
+tel:88001112233 визуально - текст: lorem
+trololo визуально - текст: massa
+Отсутствует адрес ссылки. Визуально - текст: Quisque
+Отсутствует адрес ссылки. Визуально - текст: elementum
+Отсутствует адрес ссылки. Визуально - текст: leo
+Отсутствует адрес ссылки. Визуально - текст: sollicitudin

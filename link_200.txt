@@ -1,0 +1,19 @@
+Рабочие внешние ссылки:
+http://volgatech.net  визуально - текст: posuere
+http://www.google.com  визуально - текст: Nulla
+http://www.yandex.ru  визуально - текст: In
+Рабочие внутренние ссылки:
+http://links.testingcourse.ru/index.html
+http://links.testingcourse.ru/page1.html
+http://links.testingcourse.ru/page10.html
+http://links.testingcourse.ru/page2.html
+http://links.testingcourse.ru/page3.html
+http://links.testingcourse.ru/page4.html
+http://links.testingcourse.ru/page5.html
+http://links.testingcourse.ru/page6.html
+http://links.testingcourse.ru/page7.html
+http://links.testingcourse.ru/page8.html
+http://links.testingcourse.ru/page9.html
+http://links.testingcourse.ru/termopasta.png
+Рабочие ссылки JS:
+javascript:alert('Hello');  визуально - текст: commodo
