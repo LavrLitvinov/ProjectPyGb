@@ -38,7 +38,7 @@ def valid_url(url):
 
 # *********************************************************************************************
 def website_links(url, ext_link, int_link, java_link, break_link, DOMAIN_NAME ):
-    print("Изучаем url: ", url)
+    print("Изучаааююю url: ", url)
     urls = set()
     soup = BeautifulSoup(requests.get(url).content, "html.parser")
 
@@ -47,21 +47,21 @@ def website_links(url, ext_link, int_link, java_link, break_link, DOMAIN_NAME ):
         #print("a: ", a_teg)
         
         if href_row in (None, "", "#", "/", " ", "\\", "'"):
-            break_link.add("Отсутствует адрес ссылки. Визуально - текст: " + a_teg.text)
+            break_link.add("Отсутствует адрес ссылки. визуально на странице: " + a_teg.text)
             continue
 
         href = urljoin(url, href_row)
         if(not(valid_url(href))):
-            break_link.add(href_row + " визуально - текст: " + a_teg.text)
+            break_link.add(href_row + " визуально на странице: " + a_teg.text)
             continue
 
         #print("href= ", href)
         if(urlparse(href).scheme == 'javascript' ): 
-            java_link.add(href+ "  визуально - текст: " + a_teg.text)
+            java_link.add(href+ "  визуально на странице: " + a_teg.text)
             continue 
 
         if(urlparse(href).netloc != DOMAIN_NAME ): 
-            ext_link.add(href+ "  визуально - текст: " + a_teg.text)  
+            ext_link.add(href+ "  визуально на странице: " + a_teg.text)  
             continue
 
         urls.add(href)
@@ -108,7 +108,7 @@ def print_set(ext_link, int_link, java_link, break_link):
     print()
     l3 = list(break_link)
     l3.sort()
-    print("Ломаные ссылки:")
+    print("Битые ссылки:")
     for j in l3:
         print(j)
   
@@ -150,7 +150,7 @@ def write_set (ext_link, int_link, java_link, break_link):
         for j in l3:
             gr.write(j + '\n')
     print()
-    print("Путь к файлам с результатом: ", file_path, " и ",file_path1  )
+    print("Путь к файлам с результатами: ", file_path, " и ",file_path1  )
         
 
 
